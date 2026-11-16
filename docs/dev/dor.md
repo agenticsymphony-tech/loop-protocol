@@ -4,6 +4,7 @@ title: Definition of Ready (DoR) — Implementation Issue（実装 Issue の着�
 status: active
 created_by_issue: 72
 parent_issue: 40
+last_updated: 2026-11-16
 ---
 
 # Definition of Ready (DoR) — Implementation Issue
@@ -232,6 +233,8 @@ exit 5（no tests collected）を「baseline で fail した」と解釈して�
 | Required Skills | テンプレ準拠（必須セクション存在） | 機械判定 |
 | スコープ妥当性・体験判断 | （本 skill の責務外 — `review-issue` Skill / 人間レビュー） | 人間判断 |
 
+> **注記（state_label）**: `issue-contract-review` が確認する state ラベル（`state/ready` 等）の確認は DoR 条件ではなく preflight 前提条件であり、その運用定義は A2 #76 のスコープである。
+
 ## Out of Scope
 
 - DoR 判定 logic の実装（本ドキュメントは判定基準の定義のみ。実装は A1 完了後の follow-up Issue で扱う）
@@ -255,3 +258,9 @@ exit 5（no tests collected）を「baseline で fail した」と解釈して�
 - Anthropic Engineering Blog — Equipping agents for the real world with Agent Skills（引用日: 2026-05-19）
   - https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
   - Skill は「簡潔・構造化・実利用でテスト済みであるべき」という設計思想の根拠として参照
+
+### 引用元選定ガイドライン（AC4）
+
+- **一次情報源優先**: 公式ドキュメント・公式ブログ・仕様書・当該リポジトリの Issue / PR 等、発信主体自身による一次情報源を優先して引用する
+- **二次情報源不採用**: 個人ブログ・まとめ記事・転載記事等の二次情報源は根拠として採用しない（一次情報源の確認の手がかりとしてのみ利用する）
+- 引用時は URL と引用日を併記する
